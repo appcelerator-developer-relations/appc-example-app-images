@@ -1,0 +1,50 @@
+/*
+
+This is your global styles file. Selectors and rules you define
+here will be applied throughout your app. However, these rules
+have the lowest priority of any style settings.
+
+For more information, see the "Style Priorities" section of
+http://docs.appcelerator.com/titanium/latest/#!/guide/Alloy_Styles_and_Themes
+
+For example, the following would apply to all labels, windows,
+and text fields (depending on platform) in your app unless you
+overrode the settings with other TSS, XML, or JS settings:
+
+*/
+
+'Label[platform=android]': {
+	color: '#000' // all platforms except Android default to black
+}
+
+'.p': {
+	
+	// top/bottom padding (needs the height to be set to SIZE or it will FILL)
+	top: 10,
+	bottom: 5,
+	height: Ti.UI.SIZE,
+
+	color: '#999',
+	font: {
+		fontSize: 14
+	}
+}
+
+'.small': {
+	font: {
+		fontSize: 12
+	}
+}
+
+'Window': {
+	backgroundColor: '#fff' // white background instead of default transparent
+}
+
+'ScrollView': {
+
+	// some left and right padding
+	left: 10,
+	right: 10,
+
+	layout: 'vertical'
+}

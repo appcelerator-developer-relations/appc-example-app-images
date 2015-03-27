@@ -1,0 +1,14 @@
+<Alloy>
+	<Window title="Density Test">
+		<ScrollView>
+			<Label class="p">It should have the following text:</Label>
+			<Label id="suffix" />
+			<Label class="p">It should have the following color:</Label>
+			<Label id="color" />
+			<Label id="widthText" class="p">It should be %s* as wide as the ruler:</Label>
+			<View class="ruler" />
+			<ImageView image="/images/subfolder/image.png" />
+			<Label class="p small">* The ruler has a fixed width of 100dp, while the image has no width or height set. Only if the device DPI exactly match a generalized category will the image (who's width at mdpi is 100px) be shown in exactly 100dp width. This why you should ALWAYS set the image width or height.</Label>
+		</ScrollView>
+	</Window>
+</Alloy>

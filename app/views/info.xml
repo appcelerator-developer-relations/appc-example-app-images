@@ -1,0 +1,14 @@
+<Alloy>
+	<Window title="Device Information">
+		<ScrollView>
+			<Label class="p">Ti.Platform.displayCaps.dpi</Label>
+			<Label id="dpi" />
+			<Label class="p">Ti.Platform.displayCaps.logicalDensityFactor</Label>
+			<Label id="ldf" />
+			<Label class="p">Ti.Platform.displayCaps.density</Label>
+			<Label id="density" />
+			<Label class="p">Suffix (derived)</Label>
+			<Label id="suffix" />
+		</ScrollView>
+	</Window>
+</Alloy>

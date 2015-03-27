@@ -1,0 +1,10 @@
+<Alloy>
+	<TabGroup>
+		<Tab title="Information">
+			<Require src="info" />
+		</Tab>
+		<Tab title="Density">
+			<Require src="density" />
+		</Tab>
+	</TabGroup>
+</Alloy>
