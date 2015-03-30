@@ -30,6 +30,6 @@ var utils = require('utils');
 	// test if the device dpi exactly matches a category
 	var exact = [120,160,240,320,480,640].indexOf(Ti.Platform.displayCaps.dpi) !== -1;
 
-	$.widthText.text = $.widthText.text.replace('%s', exact ? 'EXACTLY' : 'ABOUT');
+	$.widthText.text = $.widthText.text.replace('%s', exact ? 'EXACTLY' : 'NOT');
 
 })(arguments[0] || {});
