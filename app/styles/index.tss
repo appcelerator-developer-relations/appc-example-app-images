@@ -1,3 +1,8 @@
+'TabGroup': {
+	activeTabIconTint: '#DD0837',
+	tabsBackgroundColor: '#222'
+}
+
 'Tab': {
 	icon: 'images/tabIcon.png'
 }

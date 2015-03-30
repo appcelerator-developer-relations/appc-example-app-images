@@ -37,7 +37,14 @@ overrode the settings with other TSS, XML, or JS settings:
 }
 
 'Window': {
-	backgroundColor: '#fff' // white background instead of default transparent
+	backgroundColor: '#fff', // white background instead of default transparent
+}
+
+'Window[platform=ios]': {
+	barColor: '#DD0837',
+	titleAttributes: {
+		color: '#fff'
+	}
 }
 
 'ScrollView': {
