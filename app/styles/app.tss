@@ -36,12 +36,17 @@ overrode the settings with other TSS, XML, or JS settings:
 	}
 }
 
+'.center': {
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+
 'Window': {
 	backgroundColor: '#fff', // white background instead of default transparent
 }
 
 'Window[platform=ios]': {
 	barColor: '#DD0837',
+	translucent: false,
 	titleAttributes: {
 		color: '#fff'
 	}
