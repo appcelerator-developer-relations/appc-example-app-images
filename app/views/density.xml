@@ -11,7 +11,7 @@
 			<Label class="p small center">* The image has no width or height set. On iOS its width in dp will be the width of the matched image in px devided by the LDF of that image. This means it will always show in the expected size.\n\nOn Android it will be the width of the matched image in px devided by (device DPI / 160). Only if the device DPI exactly match a category will it show at the expected size. This why you should ALWAYS set the image width or height.</Label>
 			<Label platform="ios" class="p">The next remote image should* size well on iOS:</Label>
 			<ImageView platform="ios" id="remoteImage" hires="true" />
-			<Label platform="ios" class="p small center">* On iPhone 6 Plus you will see the @2x image because remote @3x mages are not yet supported.</Label>
+			<Label platform="ios" class="p small center" onClick="openURL" url="https://jira.appcelerator.org/browse/TIMOB-18769">* On iPhone 6 Plus you will see the @2x image because remote @3x mages are not yet supported. Tap for the JIRA ticket.</Label>
 		</ScrollView>
 	</Window>
 </Alloy>

@@ -49,3 +49,7 @@ var utils = require('utils');
 	}
 
 })(arguments[0] || {});
+
+function openURL(e) {
+	Ti.Platform.openURL(e.source.url);
+}
