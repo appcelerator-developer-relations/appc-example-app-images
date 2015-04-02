@@ -45,7 +45,7 @@ overrode the settings with other TSS, XML, or JS settings:
 }
 
 'Window[platform=ios]': {
-	barColor: '#DD0837',
+	barColor: '#CD1625',
 	translucent: false,
 	titleAttributes: {
 		color: '#fff'
