@@ -58,5 +58,8 @@ overrode the settings with other TSS, XML, or JS settings:
 	left: 10,
 	right: 10,
 
-	layout: 'vertical'
+	layout: 'vertical',
+
+	contentWidth: Ti.UI.FILL,
+	contentHeight: Ti.UI.SIZE
 }
