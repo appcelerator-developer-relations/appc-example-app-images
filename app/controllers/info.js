@@ -5,9 +5,22 @@ var utils = require('utils');
  * @param  {Object} args arguments passed to the controller
  */
 (function constructor(args) {
+	var ldf = Ti.Platform.displayCaps.logicalDensityFactor;
+
+	var platformWidth = Ti.Platform.displayCaps.platformWidth;
+	var platformHeight = Ti.Platform.displayCaps.platformHeight;
+
+	// on Android these are in px
+	if (OS_ANDROID) {
+		platformWidth = platformWidth / ldf;
+		platformHeight = platformHeight / ldf;
+	}
+
+	$.platformWidth.text = platformWidth;
+	$.platformHeight.text = platformHeight;
 
 	$.dpi.text = Ti.Platform.displayCaps.dpi;
-	$.ldf.text = Ti.Platform.displayCaps.logicalDensityFactor;
+	$.ldf.text = ldf;
 	$.density.text = Ti.Platform.displayCaps.density;
 	$.suffix.text = utils.densitySuffix();
 
