@@ -1,17 +1,20 @@
 <Alloy>
 	<Window title="Density Test">
 		<ScrollView>
-			<Label class="p">The image should have the following text:</Label>
-			<Label id="suffix" />
-			<Label class="p">It should have the following color:</Label>
-			<Label id="color" />
-			<Label id="rulerLabel" class="p">It should%s* be as wide as this 100dp ruler:</Label>
-			<View class="ruler" />
-			<ImageView image="/images/subfolder/image.png" />
-			<Label class="p small center">* The image has no width or height set. On iOS its width in dp will be the width of the matched image in px devided by the LDF of that image. This means it will always show in the expected size.\n\nOn Android it will be the width of the matched image in px devided by (device DPI / 160). Only if the device DPI exactly match a category will it show at the expected size. This why you should ALWAYS set the image width or height.</Label>
-			<Label platform="ios" class="p">The next remote image should* size well on iOS:</Label>
-			<ImageView platform="ios" id="remoteImage" hires="true" />
-			<Label platform="ios" class="p small center" onClick="openURL" url="https://jira.appcelerator.org/browse/TIMOB-18769">* On iPhone 6 Plus you will see the @2x image because remote @3x mages are not yet supported. Tap for the JIRA ticket.</Label>
+			<View class="padding" layout="vertical">
+				<Label id="suffixLabel" class="p">The image should* have the following text:</Label>
+				<Label id="suffix" />
+				<Label id="colorLabel" class="p">It should* have the following color:</Label>
+				<Label id="color" />
+				<Label id="rulerLabel" class="p">It should** be as wide as this 100dp ruler:</Label>
+				<View class="ruler" />
+				<ImageView image="/images/subfolder/image.png" onClick="toggleWidth" />
+				<Label class="p small center">* Android selects the closest matching category, which might also be higher then the device DPI. iOS willl only fall back to lower categories.</Label>
+				<Label class="p small center">** The image has no width or height set. On iOS its width in dp will be the width of the matched image in px devided by the LDF of that image. This means it will always show in the expected size. On Android it will be the width of the matched image in px devided by LDF of the device. Only if the device DPI exactly match a category will it show at the expected size. This why you should ALWAYS set the image width or height. Tap the image to set/unset the width to see the difference.</Label>
+				<Label platform="ios" class="p">The next remote image should* size well on iOS:</Label>
+				<ImageView platform="ios" id="remoteImage" hires="true" onClick="openURL" url="https://jira.appcelerator.org/browse/TIMOB-18769" />
+				<Label platform="ios" class="p small center">* On iPhone 6 Plus you will see the @2x image because remote @3x images are not yet supported. Tap the image for the JIRA ticket.</Label>
+			</View>
 		</ScrollView>
 	</Window>
 </Alloy>

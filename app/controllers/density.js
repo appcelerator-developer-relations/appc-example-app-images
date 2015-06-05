@@ -6,6 +6,9 @@ var utils = require('utils');
  */
 (function constructor(args) {
 
+	// device DPI exactly matches a category
+	var exact = OS_IOS || ([120, 160, 240, 320, 480, 640].indexOf(Ti.Platform.displayCaps.dpi) !== -1);
+
 	var suffix = utils.densitySuffix();
 
 	$.suffix.text = suffix;
@@ -27,12 +30,10 @@ var utils = require('utils');
 		});
 	}
 
-	if (!OS_IOS) {
-
-		// device DPI does not exactly match a category
-		if ([120, 160, 240, 320, 480, 640].indexOf(Ti.Platform.displayCaps.dpi) !== -1) {
-			$.rulerLabel.text = $.rulerLabel.text.replace('%s', ' NOT');
-		}
+	if (!exact) {
+		$.suffixLabel.text = $.suffixLabel.text.replace('should*', 'might*');
+		$.colorLabel.text = $.colorLabel.text.replace('should*', 'might*');
+		$.rulerLabel.text = $.rulerLabel.text.replace('**', ' NOT**');
 	}
 
 	// on iOS we can use remote density-specific images as well (note the hires attribute in the XML!)
@@ -49,6 +50,11 @@ var utils = require('utils');
 	}
 
 })(arguments[0] || {});
+
+function toggleWidth(e) {
+	e.source.width = (e.source.width === 100) ? Ti.UI.SIZE : 100;
+	e.source.height = (e.source.height === 100) ? Ti.UI.SIZE : 100;
+}
 
 function openURL(e) {
 	Ti.Platform.openURL(e.source.url);

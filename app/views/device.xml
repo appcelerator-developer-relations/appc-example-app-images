@@ -1,0 +1,20 @@
+<Alloy>
+	<Window title="Device Test">
+		<ScrollView layout="vertical">
+
+			<Button platform="ios" onClick="openFullscreen">Open full-screen ImageView</Button>
+
+			<Label platform="android" id="fullwidth" class="p">This full-width image should say: FILENAME</Label>
+			<ImageView platform="android" image="/images/fullwidth.png" width="Ti.UI.FILL" height="Ti.UI.SIZE" />
+
+			<View class="padding" layout="vertical">
+				<Label class="p">This ImageView is 80%x100dp and the remote placeholder image should display the appropriate size in px:</Label>
+				<ImageView id="remoteImage" width="80%" height="100" onPostlayout="cropRemote" />
+				
+				<Label class="p">This local 2048x2048 image is resized and cropped to cover the 80%x100dp ImageView in the appropriate density:</Label>
+				<ImageView id="localImage" width="80%" height="100" onPostlayout="cropLocal" />
+			</View>
+
+		</ScrollView>
+	</Window>
+</Alloy>

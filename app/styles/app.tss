@@ -53,10 +53,15 @@ overrode the settings with other TSS, XML, or JS settings:
 }
 
 'ScrollView': {
+	contentWidth: Ti.UI.FILL,
+	contentHeight: Ti.UI.SIZE
+}
 
-	// some left and right padding
+'.padding': {
 	left: 10,
 	right: 10,
+	top: 10,
+	bottom: 10,
 
-	layout: 'vertical'
+	height: Ti.UI.SIZE
 }

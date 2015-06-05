@@ -1,0 +1,23 @@
+'Window': {
+	fullscreen: true
+}
+
+'Window[platform=android]': {
+	theme: 'Theme.AppCompat.Fullscreen'
+}
+
+'ImageView': {
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL
+}
+
+'Label': {
+	top: 30, right: 30, left: 30,
+
+	backgroundColor: '#8F00',
+	color: '#FFF',
+	font: {
+		fontWeight: 'bold'
+	},
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}

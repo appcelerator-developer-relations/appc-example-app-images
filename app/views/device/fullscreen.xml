@@ -1,0 +1,6 @@
+<Alloy>
+	<Window id="win" onClick="close">
+		<ImageView image="/images/fullscreen.png" />
+		<Label id="expectedFilename">The image should read:\n\nFILENAME\n\n(tap to close)</Label>
+	</Window>
+</Alloy>
