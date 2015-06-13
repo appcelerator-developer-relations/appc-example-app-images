@@ -6,5 +6,8 @@
 		<Tab title="Density">
 			<Require src="density" />
 		</Tab>
+		<Tab title="Device">
+			<Require src="device" />
+		</Tab>
 	</TabGroup>
 </Alloy>

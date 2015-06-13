@@ -1,14 +1,20 @@
 <Alloy>
 	<Window title="Device Information">
 		<ScrollView>
-			<Label class="p">Ti.Platform.displayCaps.dpi</Label>
-			<Label id="dpi" />
-			<Label class="p">Ti.Platform.displayCaps.logicalDensityFactor</Label>
-			<Label id="ldf" />
-			<Label class="p">Ti.Platform.displayCaps.density</Label>
-			<Label id="density" />
-			<Label class="p">Suffix (derived)</Label>
-			<Label id="suffix" />
+			<View class="padding" layout="vertical">
+				<Label class="p">Ti.Platform.displayCaps.platformWidth (dp)</Label>
+				<Label id="platformWidth" />
+				<Label class="p">Ti.Platform.displayCaps.platformHeight (dp)</Label>
+				<Label id="platformHeight" />
+				<Label class="p">Ti.Platform.displayCaps.dpi</Label>
+				<Label id="dpi" />
+				<Label class="p">Ti.Platform.displayCaps.logicalDensityFactor</Label>
+				<Label id="ldf" />
+				<Label class="p">Ti.Platform.displayCaps.density</Label>
+				<Label id="density" />
+				<Label class="p">Suffix (derived)</Label>
+				<Label id="suffix" />
+			</View>
 		</ScrollView>
 	</Window>
 </Alloy>
